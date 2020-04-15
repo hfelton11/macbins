@@ -1,0 +1,74 @@
+--- clamd.conf.sample	2019-12-10 18:01:16.000000000 -0800
++++ clamd.conf	2019-12-15 06:08:22.000000000 -0800
+@@ -1,17 +1,18 @@
+ ##
+-## Example config file for the Clam AV daemon
++## Config file for the Clam AV daemon
+ ## Please read the clamd.conf(5) manual before editing this file.
+ ##
+ 
+ 
+ # Comment or remove the line below.
+-Example
++# Example
+ 
+ # Uncomment this option to enable logging.
+ # LogFile must be writable for the user running daemon.
+ # A full path is required.
+ # Default: disabled
+ #LogFile /tmp/clamd.log
++LogFile /usr/local/var/log/clamd.log
+ 
+ # By default the log file is locked for writing - the lock protects against
+ # running clamd multiple times (if want to run another clamd, please
+@@ -32,7 +33,7 @@
+ 
+ # Log time with each message.
+ # Default: no
+-#LogTime yes
++LogTime yes
+ 
+ # Also log clean files. Useful in debugging but drastically increases the
+ # log size.
+@@ -54,7 +55,7 @@
+ 
+ # Enable log rotation. Always enabled when LogFileMaxSize is enabled.
+ # Default: no
+-#LogRotate yes
++LogRotate yes
+ 
+ # Enable Prelude output.
+ # Default: no
+@@ -72,6 +73,7 @@
+ # daemon (main thread).
+ # Default: disabled
+ #PidFile /var/run/clamd.pid
++PidFile /usr/local/var/run/clamav/clamd.pid
+ 
+ # Optional path to the global temporary directory.
+ # Default: system specific (usually /tmp or /var/tmp).
+@@ -80,6 +82,7 @@
+ # Path to the database directory.
+ # Default: hardcoded (depends on installation options)
+ #DatabaseDirectory /var/lib/clamav
++DatabaseDirectory /usr/local/var/lib/clamav
+ 
+ # Only load the official signatures published by the ClamAV project.
+ # Default: no
+@@ -91,6 +94,7 @@
+ # Path to a local socket file the daemon will listen on.
+ # Default: disabled (must be specified by a user)
+ #LocalSocket /tmp/clamd.socket
++LocalSocket /usr/local/var/run/clamav/clamd.socket
+ 
+ # Sets the group ownership on the unix socket.
+ # Default: disabled (the primary group of the user running clamd)
+@@ -210,7 +214,7 @@
+ 
+ # Don't fork into background.
+ # Default: no
+-#Foreground yes
++Foreground yes
+ 
+ # Enable debug messages in libclamav.
+ # Default: no

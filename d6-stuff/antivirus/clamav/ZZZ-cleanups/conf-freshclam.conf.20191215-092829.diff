@@ -1,0 +1,34 @@
+2c2
+< ## Example config file for freshclam
+---
+> ## Config file for freshclam
+8c8
+< Example
+---
+> # Example
+13a14
+> DatabaseDirectory /usr/local/var/lib/clamav
+17a19
+> UpdateLogFile /usr/local/var/log/freshclam.log
+47c49
+< #LogRotate yes
+---
+> LogRotate yes
+51a54
+> PidFile /usr/local/var/run/freshclam.pid
+56a60
+> DatabaseOwner _clamav
+145a150
+> NotifyClamd /usr/local/etc/clamav/clamd.conf
+162c167
+< #Foreground yes
+---
+> Foreground yes
+170c175
+< #ConnectTimeout 60
+---
+> ConnectTimeout 60
+174c179
+< #ReceiveTimeout 300
+---
+> ReceiveTimeout 300

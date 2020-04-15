@@ -1,0 +1,67 @@
+--- freshclam.conf.sample	2020-04-04 06:00:27.000000000 -0700
++++ freshclam.conf	2020-04-05 14:47:48.000000000 -0700
+@@ -7,3 +7,3 @@
+ # Comment or remove the line below.
+-Example
++#Example
+ 
+@@ -12,3 +12,3 @@
+ # Default: hardcoded (depends on installation options)
+-#DatabaseDirectory /var/lib/clamav
++DatabaseDirectory /usr/local/var/lib/clamav
+ 
+@@ -16,3 +16,3 @@
+ # Default: disabled
+-#UpdateLogFile /var/log/freshclam.log
++UpdateLogFile /usr/local/var/log/freshclam.log
+ 
+@@ -29,3 +29,3 @@
+ # Default: no
+-#LogTime yes
++LogTime yes
+ 
+@@ -46,3 +46,3 @@
+ # Default: no
+-#LogRotate yes
++LogRotate yes
+ 
+@@ -50,3 +50,3 @@
+ # Default: disabled
+-#PidFile /var/run/freshclam.pid
++PidFile /usr/local/var/run/freshclam.pid
+ 
+@@ -55,3 +55,3 @@
+ # Default: clamav (may depend on installation options)
+-#DatabaseOwner clamav
++DatabaseOwner _clamav
+ 
+@@ -75,3 +75,3 @@
+ # Default: 3 (per mirror)
+-#MaxAttempts 5
++MaxAttempts 5
+ 
+@@ -144,3 +144,3 @@
+ # Default: no
+-#NotifyClamd /path/to/clamd.conf
++NotifyClamd /usr/local/etc/clamav/clamd.conf
+ 
+@@ -161,3 +161,3 @@
+ # Default: no
+-#Foreground yes
++Foreground yes
+ 
+@@ -169,3 +169,3 @@
+ # Default: 30
+-#ConnectTimeout 60
++ConnectTimeout 60
+ 
+@@ -173,3 +173,3 @@
+ # Default: 0
+-#ReceiveTimeout 1800
++ReceiveTimeout 1800
+ 
+@@ -179,3 +179,3 @@
+ # Default: yes
+-#TestDatabases yes
++TestDatabases yes
+ 

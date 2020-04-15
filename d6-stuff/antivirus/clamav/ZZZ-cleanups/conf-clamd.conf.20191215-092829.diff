@@ -1,0 +1,44 @@
+2c2
+< ## Example config file for the Clam AV daemon
+---
+> ## Config file for the Clam AV daemon
+8c8
+< Example
+---
+> # Example
+14a15
+> LogFile /usr/local/var/log/clamd.log
+57c58
+< #LogRotate yes
+---
+> LogRotate yes
+74a76
+> PidFile /usr/local/var/run/clamd.pid
+82a85
+> DatabaseDirectory /usr/local/var/lib/clamav
+93a97
+> LocalSocket /usr/local/var/run/clamd.socket
+206a211
+> User _clamav
+213c218
+< #Foreground yes
+---
+> Foreground yes
+427c432
+< #StructuredDataDetection yes
+---
+> StructuredDataDetection yes
+437a443
+> StructuredMinSSNCount 50
+447c453
+< #StructuredSSNFormatStripped yes
+---
+> StructuredSSNFormatStripped yes
+505a512
+> MaxFileSize 900M
+620c627
+< #AlertExceedsMax yes
+---
+> AlertExceedsMax yes
+724a732
+> OnAccessExcludeUname _clamav

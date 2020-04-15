@@ -1,0 +1,69 @@
+--- clamd.conf.sample	2019-12-15 08:41:28.000000000 -0800
++++ clamd.conf	2019-12-15 09:03:47.000000000 -0800
+@@ -1,3 +1,3 @@
+ ##
+-## Example config file for the Clam AV daemon
++## Config file for the Clam AV daemon
+ ## Please read the clamd.conf(5) manual before editing this file.
+@@ -7,3 +7,3 @@
+ # Comment or remove the line below.
+-Example
++# Example
+ 
+@@ -14,2 +14,3 @@
+ #LogFile /tmp/clamd.log
++LogFile /usr/local/var/log/clamd.log
+ 
+@@ -56,3 +57,3 @@
+ # Default: no
+-#LogRotate yes
++LogRotate yes
+ 
+@@ -74,2 +75,3 @@
+ #PidFile /var/run/clamd.pid
++PidFile /usr/local/var/run/clamd.pid
+ 
+@@ -82,2 +84,3 @@
+ #DatabaseDirectory /var/lib/clamav
++DatabaseDirectory /usr/local/var/lib/clamav
+ 
+@@ -93,2 +96,3 @@
+ #LocalSocket /tmp/clamd.socket
++LocalSocket /usr/local/var/run/clamd.socket
+ 
+@@ -206,2 +210,3 @@
+ #User clamav
++User _clamav
+ 
+@@ -212,3 +217,3 @@
+ # Default: no
+-#Foreground yes
++Foreground yes
+ 
+@@ -426,3 +431,3 @@
+ # Default: No
+-#StructuredDataDetection yes
++StructuredDataDetection yes
+ 
+@@ -437,2 +442,3 @@
+ #StructuredMinSSNCount 5
++StructuredMinSSNCount 50
+ 
+@@ -446,3 +452,3 @@
+ # Default: no
+-#StructuredSSNFormatStripped yes
++StructuredSSNFormatStripped yes
+ 
+@@ -505,2 +511,3 @@
+ #MaxFileSize 30M
++MaxFileSize 900M
+ 
+@@ -619,3 +626,3 @@
+ # Default: no
+-#AlertExceedsMax yes
++AlertExceedsMax yes
+ 
+@@ -724,2 +731,3 @@
+ #OnAccessExcludeUname clamav
++OnAccessExcludeUname _clamav
+ 

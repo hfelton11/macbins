@@ -1,0 +1,52 @@
+--- freshclam.conf.sample	2019-12-15 08:41:28.000000000 -0800
++++ freshclam.conf	2019-12-15 09:27:57.000000000 -0800
+@@ -1,3 +1,3 @@
+ ##
+-## Example config file for freshclam
++## Config file for freshclam
+ ## Please read the freshclam.conf(5) manual before editing this file.
+@@ -7,3 +7,3 @@
+ # Comment or remove the line below.
+-Example
++# Example
+ 
+@@ -13,2 +13,3 @@
+ #DatabaseDirectory /var/lib/clamav
++DatabaseDirectory /usr/local/var/lib/clamav
+ 
+@@ -17,2 +18,3 @@
+ #UpdateLogFile /var/log/freshclam.log
++UpdateLogFile /usr/local/var/log/freshclam.log
+ 
+@@ -46,3 +48,3 @@
+ # Default: no
+-#LogRotate yes
++LogRotate yes
+ 
+@@ -51,2 +53,3 @@
+ #PidFile /var/run/freshclam.pid
++PidFile /usr/local/var/run/freshclam.pid
+ 
+@@ -56,2 +59,3 @@
+ #DatabaseOwner clamav
++DatabaseOwner _clamav
+ 
+@@ -145,2 +149,3 @@
+ #NotifyClamd /path/to/clamd.conf
++NotifyClamd /usr/local/etc/clamav/clamd.conf
+ 
+@@ -161,3 +166,3 @@
+ # Default: no
+-#Foreground yes
++Foreground yes
+ 
+@@ -169,3 +174,3 @@
+ # Default: 30
+-#ConnectTimeout 60
++ConnectTimeout 60
+ 
+@@ -173,3 +178,3 @@
+ # Default: 60
+-#ReceiveTimeout 300
++ReceiveTimeout 300
+ 

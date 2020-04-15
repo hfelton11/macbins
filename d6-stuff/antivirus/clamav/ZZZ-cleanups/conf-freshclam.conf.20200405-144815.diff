@@ -1,0 +1,52 @@
+8c8
+< Example
+---
+> #Example
+13c13
+< #DatabaseDirectory /var/lib/clamav
+---
+> DatabaseDirectory /usr/local/var/lib/clamav
+17c17
+< #UpdateLogFile /var/log/freshclam.log
+---
+> UpdateLogFile /usr/local/var/log/freshclam.log
+30c30
+< #LogTime yes
+---
+> LogTime yes
+47c47
+< #LogRotate yes
+---
+> LogRotate yes
+51c51
+< #PidFile /var/run/freshclam.pid
+---
+> PidFile /usr/local/var/run/freshclam.pid
+56c56
+< #DatabaseOwner clamav
+---
+> DatabaseOwner _clamav
+76c76
+< #MaxAttempts 5
+---
+> MaxAttempts 5
+145c145
+< #NotifyClamd /path/to/clamd.conf
+---
+> NotifyClamd /usr/local/etc/clamav/clamd.conf
+162c162
+< #Foreground yes
+---
+> Foreground yes
+170c170
+< #ConnectTimeout 60
+---
+> ConnectTimeout 60
+174c174
+< #ReceiveTimeout 1800
+---
+> ReceiveTimeout 1800
+180c180
+< #TestDatabases yes
+---
+> TestDatabases yes
